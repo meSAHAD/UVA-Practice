@@ -1,6 +1,6 @@
 *.exe
 *.txt
-.bin
+*.bin
 pcode.cpp
 .vscode
 tempCodeRunnerFile.cpp
