@@ -1,11 +1,11 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
     int n;
-    while(cin>>n){
-        cout<<n+(n /2)<<endl;
+    while (scanf("%d", &n) == 1)
+    {
+        printf("%d\n", n + (n / 2));
     }
     return 0;
 }

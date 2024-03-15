@@ -1,24 +1,29 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    int n, count=0;
-    while(cin>>n){
+    int n, count = 0;
+    while (scanf("%d", &n) != EOF)
+    {
         int arr[n];
-        for(int i=0;i<n;i++) cin>>arr[i];
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n-1;j++){
-                if(arr[j]>arr[j+1]){
-                    int temp=arr[j];
-                    arr[j]=arr[j+1];
-                    arr[j+1]=temp;
+        int i,j;
+        for (i = 0; i < n; i++)
+            scanf("%d", &arr[i]);
+        for ( i = 0; i < n; i++)
+        {
+            for (j = 0; j < n - 1; j++)
+            {
+                if (arr[j] > arr[j + 1])
+                {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                     count++;
                 }
             }
         }
-        cout << "Minimum exchange operations : "<<count<<endl;
-        count=0;
+        printf("Minimum exchange operations : %d\n", count);
+        count = 0;
     }
     return 0;
 }

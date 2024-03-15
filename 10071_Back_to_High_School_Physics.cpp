@@ -1,12 +1,12 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    int v,t;
-    while(cin>>v>>t){
-        int disp =2*v*t;
-        cout<<disp<<endl;
+    int v, t;
+    while (scanf("%d %d", &v, &t) == 2)
+    {
+        int disp = 2 * v * t;
+        printf("%d\n", disp);
     }
     return 0;
 }

@@ -1,18 +1,21 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    int t, i=1;
-    cin>>t;
-    while(t--){
-        int a,b;
-        cin>>a>>b;
-        long long sum=0;
-        for(int i=a; i<=b; i++){
-            if(i%2!=0) sum=sum+i;
+    int t, i = 1;
+    scanf("%d", &t);
+    while (t--)
+    {
+        int a, b;
+        scanf("%d %d", &a, &b);
+        long long sum = 0;
+        int j;
+        for ( j = a; j <= b; j++)
+        {
+            if (j % 2 != 0)
+                sum += j;
         }
-        cout<<"Case "<<i<<": "<<sum<<endl;
+        printf("Case %d: %lld\n", i, sum);
         i++;
     }
     return 0;

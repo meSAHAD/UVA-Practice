@@ -1,18 +1,28 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    int t;
-    cin>> t;
-    for(int i=1; i<=t;i++)
+    int n, a, b, c;
+    scanf("%d", &n);
+    int i;
+    for (i = 0; i < n; i++)
     {
-        int salary[3];
-        for(int i=0; i<3;i++){
-            cin>>salary[i];
+        scanf("%d%d%d", &a, &b, &c);
+        if ((a > b && a < c) || (a < b && a > c))
+        {
+            printf("Case %d: %d\n", i + 1, a);
         }
-        sort(salary, salary+3);
-        cout<<"Case "<<i<<": "<<salary[1]<<endl;
+
+        if ((b > a && b < c) || (b < a && b > c))
+        {
+            printf("Case %d: %d\n", i + 1, b);
+        }
+
+        if ((c > a && c < b) || (c < a && c > b))
+        {
+            printf("Case %d: %d\n", i + 1, c);
+        }
     }
+
     return 0;
 }
