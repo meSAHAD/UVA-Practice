@@ -20,7 +20,8 @@ int main()
                 n = n / 3;
                 i++;
             }
-            for (int j = i - 1; j >= 0; j--)
+            int j;
+            for ( j = i - 1; j >= 0; j--)
             {
                 printf("%d", ternary[j]);
             }
